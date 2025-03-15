@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin: 20px 0 15px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-item, .radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input, .radio-item input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.contract-preview {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contractContent {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#contractContent h2, #contractContent h3 {
+    color: #003366;
+}
+
+#downloadBtn, #backBtn {
+    margin: 10px;
+}
+
+#backBtn {
+    background-color: #666;
+}
+
+@media (max-width: 600px) {
+    .container, .contract-preview {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 14px;
+    }
+}
