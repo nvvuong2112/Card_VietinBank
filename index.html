@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thẻ tín dụng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GIẤY ĐỀ NGHỊ KIÊM HỢP ĐỒNG PHÁT HÀNH VÀ SỬ DỤNG THẺ TÍN DỤNG</h1>
+        <h2>(Dành cho khách hàng cá nhân)</h2>
+        
+        <form id="creditCardForm">
+            <!-- THÔNG TIN THẺ TÍN DỤNG ĐĂNG KÝ -->
+            <div class="section">
+                <h3>THÔNG TIN THẺ TÍN DỤNG ĐĂNG KÝ</h3>
+                
+                <div class="form-group">
+                    <label>Loại thẻ và hạng thẻ:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="visa" name="cardType" value="Visa">
+                            <label for="visa">Visa</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mastercard" name="cardType" value="MasterCard">
+                            <label for="mastercard">MasterCard</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="jcb" name="cardType" value="JCB">
+                            <label for="jcb">JCB</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="upi" name="cardType" value="UPI">
+                            <label for="upi">UPI</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Hạn mức thẻ tín dụng đề nghị:</label>
+                    <input type="number" id="creditLimit" name="creditLimit" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Hình thức bảo đảm:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="fullGuarantee" name="guaranteeType" value="Có bảo đảm toàn bộ">
+                            <label for="fullGuarantee">Có bảo đảm toàn bộ</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="partialGuarantee" name="guaranteeType" value="Có bảo đảm một phần">
+                            <label for="partialGuarantee">Có bảo đảm một phần</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="noGuarantee" name="guaranteeType" value="Không có bảo đảm">
+                            <label for="noGuarantee">Không có bảo đảm</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- THÔNG TIN CÁ NHÂN CHỦ THẺ CHÍNH -->
+            <div class="section">
+                <h3>THÔNG TIN CÁ NHÂN CHỦ THẺ CHÍNH</h3>
+                
+                <div class="form-group">
+                    <label>Họ tên (như trong CCCD/CMND):</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="male" name="gender" value="Nam">
+                            <label for="male">Nam</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="female" name="gender" value="Nữ">
+                            <label for="female">Nữ</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ngày sinh:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Số CCCD/CMND/HC:</label>
+                    <input type="text" id="idNumber" name="idNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ngày cấp:</label>
+                    <input type="date" id="idIssueDate" name="idIssueDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Nơi cấp:</label>
+                    <input type="text" id="idIssuePlace" name="idIssuePlace" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Địa chỉ thường trú:</label>
+                    <textarea id="permanentAddress" name="permanentAddress" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Địa chỉ hiện tại (nếu khác địa chỉ thường trú):</label>
+                    <textarea id="currentAddress" name="currentAddress"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Điện thoại di động:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Học vấn:</label>
+                    <select id="education" name="education" required>
+                        <option value="">-- Chọn trình độ học vấn --</option>
+                        <option value="Tiến sĩ/Thạc sĩ">Tiến sĩ/Thạc sĩ</option>
+                        <option value="Đại học">Đại học</option>
+                        <option value="Cao đẳng">Cao đẳng</option>
+                        <option value="Trung học chuyên nghiệp">Trung học chuyên nghiệp</option>
+                        <option value="Phổ thông trung học">Phổ thông trung học</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- THÔNG TIN NGHỀ NGHIỆP CHỦ THẺ CHÍNH -->
+            <div class="section">
+                <h3>THÔNG TIN NGHỀ NGHIỆP CHỦ THẺ CHÍNH</h3>
+                
+                <div class="form-group">
+                    <label>Nghề nghiệp:</label>
+                    <select id="occupation" name="occupation" required>
+                        <option value="">-- Chọn nghề nghiệp --</option>
+                        <option value="Chủ doanh nghiệp/lãnh đạo">Chủ doanh nghiệp/lãnh đạo</option>
+                        <option value="Công chức/nhân viên">Công chức/nhân viên</option>
+                        <option value="Tự kinh doanh">Tự kinh doanh</option>
+                        <option value="Hưu trí">Hưu trí</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tên đơn vị đang công tác:</label>
+                    <input type="text" id="workplaceName" name="workplaceName">
+                </div>
+                
+                <div class="form-group">
+                    <label>Chức vụ tại đơn vị:</label>
+                    <input type="text" id="position" name="position">
+                </div>
+                
+                <div class="form-group">
+                    <label>Thu nhập bình quân hàng tháng (VNĐ):</label>
+                    <input type="number" id="income" name="income" required>
+                </div>
+            </div>
+            
+            <!-- PHƯƠNG THỨC THANH TOÁN DƯ NỢ THẺ TÍN DỤNG -->
+            <div class="section">
+                <h3>PHƯƠNG THỨC THANH TOÁN DƯ NỢ THẺ TÍN DỤNG</h3>
+                
+                <div class="form-group">
+                    <label>Số tài khoản thanh toán đăng ký trích nợ tự động:</label>
+                    <input type="text" id="accountNumber" name="accountNumber">
+                </div>
+                
+                <div class="form-group">
+                    <label>Phương thức thanh toán:</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="minPayment" name="paymentMethod" value="Thanh toán tối thiểu">
+                            <label for="minPayment">Thanh toán tối thiểu</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="fullPayment" name="paymentMethod" value="Thanh toán toàn bộ">
+                            <label for="fullPayment">Thanh toán toàn bộ</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NGƯỜI THÂN LIÊN HỆ -->
+            <div class="section">
+                <h3>NGƯỜI THÂN LIÊN HỆ</h3>
+                
+                <div class="form-group">
+                    <label>Họ tên người thân:</label>
+                    <input type="text" id="relativeName" name="relativeName">
+                </div>
+                
+                <div class="form-group">
+                    <label>Quan hệ với chủ thẻ:</label>
+                    <input type="text" id="relationship" name="relationship">
+                </div>
+                
+                <div class="form-group">
+                    <label>Số điện thoại:</label>
+                    <input type="tel" id="relativePhone" name="relativePhone">
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button type="submit" id="submitBtn">Tạo hợp đồng</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="contractPreview" class="contract-preview" style="display: none;">
+        <h2>Bản xem trước hợp đồng</h2>
+        <div id="contractContent"></div>
+        <button id="downloadBtn">Tải xuống hợp đồng</button>
+        <button id="backBtn">Quay lại chỉnh sửa</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
